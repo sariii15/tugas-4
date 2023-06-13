@@ -1,32 +1,35 @@
 // import React from 'react'
-import { useState } from 'react';
-
+import { useState } from "react";
 
 const Products = (p) => {
   const { name, image, deskripsi, sumber } = p;
-  const { like, setLike } = useState(false);
-  const { showDeskipsi, setShowDeskripsi } = useState(false);
-  const { background, setBackground } = useState(true);
+  const [like, setLike] = useState(false);
+  const [showDeskipsi, setShowDeskripsi] = useState(false);
 
-  const likeClick = () => {
+  function likeClick() {
     setLike(!like);
-    setBackground(!background);
-  };
+  }
 
   const moreClick = () => {
     setShowDeskripsi(!showDeskipsi);
   };
 
   return (
-    <div className='Products'>
+    <div className="Products">
       <h3>{name}</h3>
       <img src={image} alt={name} />
       {showDeskipsi && <p>{deskripsi}</p>}
       <p>{sumber}</p>
-      <button style={{ backgroundColor: background ? "#9BABB8" : "#C2DEDC" }} onClick={likeClick}>
+      <button
+        style={{ backgroundColor: like ? "#A4907C" : "#A4907C" }}
+        onClick={likeClick}
+      >
         {like ? "Batal Suka" : "Suka"}
       </button>
-      <button onClick={moreClick}>
+      <button
+        style={{ backgroundColor: like ? "#A4907C" : "#A4907C" }}
+        onClick={moreClick}
+      >
         {showDeskipsi ? "Sembunyikan" : "Selengkapnya"}
       </button>
     </div>

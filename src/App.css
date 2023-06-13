@@ -1,19 +1,25 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .App {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .Products {
-    width: 23%;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px 0;
+  width: 23%;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0;
+  flex-direction: column;
+  background-color: #7C9070;
+
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
-button {
-background-color: "#9BABB8";
-}
+/* button {
+  background-color: "#7C9070";
+} */
